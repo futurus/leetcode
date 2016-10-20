@@ -1,7 +1,11 @@
 public class Solution {
     public int numIslands(char[][] grid) {
-        int width = grid[0].length;
+        if (grid.length == 0) return 0;
+        if (grid[0].length == 0) return 0;
+        
         int height = grid.length;
+        int width = grid[0].length;
+
         int numOfIslands = 0;
         int[][] visited = new int[height][width];
 
