@@ -26,6 +26,28 @@ public class ZigzagIterator {
         index = 0;
     }
 
+    /**
+     * General case (not tested): List of Lists
+         public ZigzagIterator(List<List<Integer>> v) {
+            zzList = new ArrayList<Integer>();
+            for (int i = 0; i < v.size(); i++) {
+                length += v.get(i).size();
+            }
+            index = 0; // keep track of number of elements in total
+            int order = 0; // keep track of which list to remove next
+
+            while (index < length) {
+                while (v.get(order).size() == 0) {
+                    order++;
+                }
+                zzList.add(v.get(order).remove(0));
+                order++;
+                index++;
+            }
+            index = 0;
+        }
+     */
+    
     public int next() {
         return zzList.get(index++);
     }
