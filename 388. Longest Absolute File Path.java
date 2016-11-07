@@ -17,8 +17,6 @@ public class Solution {
             // add dir/file to path
             curPath += "/" + entities[i].replace("\t", "");
             curLvl++;
-            
-            System.out.println(curPath);
 
             if ((curPath.length() > maxLen) && curPath.contains(".")) {
                 maxLen = curPath.length();
