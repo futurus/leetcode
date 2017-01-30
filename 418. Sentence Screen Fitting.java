@@ -1,3 +1,6 @@
+// TODO: optimize
+// Consider sentence length and effective output from cols x rows
+
 
 // Brute-force solution: timeout
 public class Solution {
