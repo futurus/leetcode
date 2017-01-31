@@ -13,7 +13,8 @@ public class Solution {
     private int previous = Integer.MIN_VALUE;
     private ArrayList<Integer> ans;
     
-    // Keywords are: Binary Search Tree, Inorder Traversal!!!
+    // Keywords are: Binary Search Tree, Inorder Traversal!!! (O(1) space)
+    // However, a HashMap straightforward implementation is more likely (O(n) space)
     
     public void helper(TreeNode root) {
         if (root == null) return;
