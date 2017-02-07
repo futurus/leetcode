@@ -32,6 +32,8 @@ public class Solution {
 }
 
 // Space and Time improvement https://discuss.leetcode.com/topic/59378/short-python-java
+// Rather than iterate single number, move up in range 1-9, 10-99, 100-999, 1000-999
+// First number in range + Left over (n*) / digits = Actual number
 public int findNthDigit(int n) {
     n -= 1;
     int digits = 1, first = 1;
