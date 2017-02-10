@@ -16,19 +16,21 @@
  * }
  */
 public class Solution {
-    public int helper(List<NestedInteger> nl, int depth) {
+    public int getSum(List<NestedInteger> nestedList, int depth) {
         int sum = 0;
-        for (int i = 0; i < nl.size(); i++) {
-            if (nl.get(i).isInteger()) {
-                sum += nl.get(i).getInteger() * depth;
+        
+        for (NestedInteger i : nestedList) {
+            if (i.isInteger()) {
+                sum += depth * i.getInteger();
             } else {
-                sum += helper(nl.get(i).getList(), depth+1);
+                sum += getSum(i.getList(), depth+1);
             }
         }
+        
         return sum;
     }
     
     public int depthSum(List<NestedInteger> nestedList) {
-        return helper(nestedList, 1);
+        return getSum(nestedList, 1);
     }
 }
