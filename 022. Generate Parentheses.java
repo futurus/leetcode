@@ -1,3 +1,4 @@
+// https://leetcode.com/problems/generate-parentheses/?tab=Description
 public class Solution {
     public void helper(List<String> result, int n, String sofar, int left, int right) {
         if (sofar.length() == n*2) {
