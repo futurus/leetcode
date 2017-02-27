@@ -10,3 +10,7 @@ public class Solution {
         }
     }
 }
+// Note: for any x, sqrt(N) is between [min(x, N/x), max(x, N/x)]
+// if x = sqrt(N), then N/x = sqrt(N)
+// if x < sqrt(N), then N/x > sqrt(N)
+// if x > sqrt(N), then N/x < sqrt(N)
