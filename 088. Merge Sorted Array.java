@@ -16,7 +16,7 @@ public class Solution {
     }
 }
 
-// even more succint
+// even more succinct
 // 1st loop: either i runs out first or j runs out first
 // - if i runs out first, finish with elems from j
 // - if j runs out first, 2nd loop won't be executed, won't need to 
