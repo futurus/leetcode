@@ -28,7 +28,10 @@ public class Solution {
 }
 
 
-// interesting view point (similar to another problem done earlier, using direct approach sometimes is faster than recursive one)
+// interesting view point (similar to another problem done earlier 
+// [https://github.com/futurus/leetcode/blob/master/401.%20Binary%20Watch.java]
+// using direct approach sometimes is faster than recursive one)
+
 // 4 nested for loops but runtime is <= 3^4 so no biggie
 // inner most if checks for 0.010.x.x cases
 
