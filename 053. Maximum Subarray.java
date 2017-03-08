@@ -79,3 +79,38 @@ public class Solution {
         }
     }
 }
+
+
+// Dynamic Programming approach
+public class Solution {
+    public int maxSubArray(int[] nums) {
+        if (nums.length == 0) return Integer.MIN_VALUE;
+        else {
+            int maxSoFar = nums[0], maxEndingHere = nums[0];
+            
+            for (int i=1; i < nums.length; i++){
+            	maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
+            	maxSoFar      = Math.max(maxSoFar, maxEndingHere);	
+            }
+            
+            return maxSoFar;
+        }
+    }
+}
+
+// another formulation
+public class Solution {
+    public int maxSubArray(int[] A) {
+        //dp[i] means the maximum subarray ending with A[i];
+        int[] dp = new int[n];
+        dp[0] = A[0];
+        int max = dp[0];
+        
+        for(int i = 1; i < A.length; i++){
+            dp[i] = (dp[i - 1] > 0 ? dp[i - 1] : 0) + A[i];
+            max = Math.max(max, dp[i]);
+        }
+        
+        return max;
+    }   
+}
